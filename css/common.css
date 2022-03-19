@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/* サイトID
+----------------------------*/
+.site-id {
+    position: relative;
+    float: left;
+}
+.site-id h1 {
+    display: inline-block;
+    margin: 10px 0 10px 20px;
+}
+
+/* グローバルナビゲーション
+----------------------------*/
+.global-nav {
+    float: right;
+    margin: 0;
+    list-style: none;
+}
+
+.global-nav li a:hover {
+    text-decoration: none;
+}
+.cd-main-header {
+    height:70px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+/* メインビジュアル
+----------------------------*/
+.main-visual {
+    position: relative;
+    height: 480px;
+    margin-bottom: 50px;
+    background: center no-repeat;
+    background-image: url("../images/main-visual.png");
+    background-size: cover;
+}
+
+/* 共通
+----------------------------*/
+body {
+    background-color: #323232;
+    color: #ffffff;
+    font-family: "Helvetica", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "hiragino Sans", "メイリオ", meiryo, verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    line-height: 30px;;
+}
+
+.main-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.sub-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+img {
+    width:100%;
+}
+
+hr {
+    margin: 80px 0;
+}
+
+/* フッター
+----------------------------*/
+footer {
+    padding: 20px 0;
+    margin-top: 80px;
+    background-color: #282828;
+}
+    footer .footer-nav {
+        margin-top: 10px;
+    }
+        footer .footer--nav li {
+            padding: 10px 15px;
+        }
+        footer .footer--nav a,
+        footer .footer--nav a:hover,
+        footer .footer--nav a:focus {
+            color: #ffffff;
+            font-weight: 600;
+        }
