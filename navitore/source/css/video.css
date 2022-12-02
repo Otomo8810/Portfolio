@@ -1,0 +1,43 @@
+@charset "utf-8";
+* {
+    margin: 0;
+}
+
+body {
+    background-color: grey;
+}
+
+h1 {
+    text-align: center;
+    font-size: 44px;
+    background-color: #fff;
+}
+
+video {
+    width: 100%;
+    margin-bottom: -3px;
+}
+
+a {
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.next {
+    float: right;
+    background-color: orange;
+    padding: 22px 22px;
+    border-radius: 100vh;
+    margin-right: 25px;
+    transition: 0.5s;
+}
+
+.next:hover {
+    float: right;
+    background-color: red;
+    padding: 22px 22px;
+    border-radius: 100vh;
+    margin-right: 20px;
+    transition: 0.5s;
+}
