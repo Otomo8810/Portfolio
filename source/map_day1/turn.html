@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="utf-8">
+        <title>video1_q1</title>
+        <link rel="stylesheet" href="../css/turn.css">
+    </head>
+
+    <body>
+        <h1>どっちに曲がった?</h1>
+        <p>※ボタンの上にカーソルを置くと曲がった先の景色が見えます。</p>
+
+        <div class="box">
+            <img src="../map_images/map_day1/turn_day1_0360.png" alt="曲がる直前の画像">
+
+            <img id="right_image" src="../map_images/map_day1/turn_day1_R0420.png" alt="右に曲がった先の画像">
+            
+            <a id="right_arrow" href="route.html" class="right">R&gt;</a>
+
+            <img id="left_image" src="../map_images/map_day1/turn_day1_L0420.png" alt="左に曲がった先の画像">
+    
+            <a id="left_arrow" href="route.html" class="left">&lt;L</a>
+        </div>
+        
+        <script>
+            document.getElementById("right_arrow").addEventListener("mouseover", () =>{
+                document.getElementById("right_image").style.display = "block";
+            })
+            document.getElementById("right_arrow").addEventListener("mouseout", () =>{
+                document.getElementById("right_image").style.display = "none";
+            })
+
+            document.getElementById("left_arrow").addEventListener("mouseover", () =>{
+                document.getElementById("left_image").style.display = "block";
+            })
+            document.getElementById("left_arrow").addEventListener("mouseout", () =>{
+                document.getElementById("left_image").style.display = "none";
+            })
+
+            // 前の回答受け取り
+            // const url = location.search;
+
+            // const ans = url.split("=")[1]
+            document.getElementById("right_arrow").href = "route.html?ans=" + "R"
+            document.getElementById("left_arrow").href = "route.html?ans=" + "L"
+        </script>
+    </body>
+
+</html>
