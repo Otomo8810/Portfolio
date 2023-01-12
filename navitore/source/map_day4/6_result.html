@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="utf-8">
+        <title>result</title>
+        <link rel="stylesheet" href="../css/result.css">
+    </head>
+
+    <body>
+        <br>
+
+        <h1>結果発表</h1>
+
+        <br>
+
+        <p><span id="count"></span>/4</p>
+
+        <br>
+
+        <table border="1">
+                <tr class="bold">
+                    <th><span class="bold">問題番号</span></th>
+                    <td>あなたが選んだ答え</td>
+                    <td>答え</td>
+                    <td>正誤</td>
+                    <td>問題ページ</td>
+                </tr>
+
+            <tr>
+                <th>Q1</th>
+                <td id="q1">選んだ答え</td>
+                <td>L</td>
+                <td id="q1correct">○か&#0215;を表示</td>
+                <td>
+                    <a href="2_turn.html" onclick="window.open('2_turn.html', '', 'width=100%,scrollbars=yes'); return false;">
+                    Q1問題ページ
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Q2</th>
+                <td id="q2">選んだ答え</td>
+                <td>C</td>
+                <td id="q2correct">○か&#0215;を表示</td>
+                <td>
+                    <a href="3_route.html" onclick="window.open('3_route.html', '', 'width=100%,scrollbars=yes'); return false;">
+                    Q2問題ページ
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Q3</th>
+                <td id="q3">選んだ答え</td>
+                <td>C</td>
+                <td id="q3correct">○か&#0215;を表示</td>
+                <td>
+                    <a href="4_keshi.html" onclick="window.open('4_keshi.html', '', 'width=100%,scrollbars=yes'); return false;">
+                    Q3問題ページ
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Q4</th>
+                <td id="q4">選んだ答え</td>
+                <td>B</td>
+                <td id="q4correct">○か&#0215;を表示</td>
+                <td>
+                    <a href="5_yaji.html" onclick="window.open('5_yaji.html', '', 'width=100%,scrollbars=yes'); return false;">
+                    Q4問題ページ
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+
+        <div>
+            <a href="../index.html">ホームへ戻る</a>
+        </div>
+
+        <script>
+            const url = location.search;
+            const ans = url.split("=")[1]
+
+            const res = ans. split('')
+
+            let count = 0
+
+            // q1
+            document.getElementById('q1').innerText = res[0]
+            
+            // == ? 答えを入力
+            if (res[0] == "L") {
+                q1correct = "○"
+                count++
+            } else {
+                q1correct = "×";
+            }
+            document.getElementById('q1correct').innerText = q1correct
+
+            // q2
+            document.getElementById('q2').innerText = res[1]
+            if (res[1] == "C") {
+                q2correct = "○"
+                count++
+            } else {
+                q2correct = "×";
+            }
+            document.getElementById('q2correct').innerText = q2correct
+            
+            // q3
+            document.getElementById('q3').innerText = res[2]
+            if (res[2] == "C") {
+                q3correct = "○"
+                count++
+            } else {
+                q3correct = "×";
+            }
+            document.getElementById('q3correct').innerText = q3correct
+
+            // q4
+            document.getElementById('q4').innerText = res[3]
+            if (res[3] == "B") {
+                q4correct = "○"
+                count++
+            } else {
+                q4correct = "×";
+            }
+            document.getElementById('q4correct').innerText = q4correct
+
+            document.getElementById('count').innerText = count
+        </script>
+
+    </body>
+    
+</html>
