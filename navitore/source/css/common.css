@@ -1,0 +1,51 @@
+@charset "utf-8";
+* {
+    margin: 0;
+}
+
+body {
+    /* ↓背景画像ver */
+    /* background: url(../images/test_image.jpg); */
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 122px;
+    text-align: center;
+    margin-top: 222px;
+}
+
+p {
+    font-size: 44px;
+    text-align: center;
+    font-weight: bold;
+}
+
+div {
+    text-align: center;
+    justify-content: center;
+    margin-top: 44px;
+}
+
+a {
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.start {
+    background-color: orange;
+    padding: 22px 66px;
+    border-radius: 2.5px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    transition: 0.5s;
+}
+
+.start:hover {
+    background-color: red;
+    transition: 0.5s;
+    color: black;
+}

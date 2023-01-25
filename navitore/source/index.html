@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="utf-8">
+        <title>navitore</title>
+        <link rel="stylesheet" href="css/common.css">
+    </head>
+
+    <body>
+        <h1>ナビトレ</h1>
+        <p>ナビ力向上↑トレーニング</p>
+        <div>
+            <a class="start" onclick="start()">トレーニングスタート</a>
+        </div>
+
+        <script>
+        const start = () => {
+            const link = [
+                "map_day1/1_video.html",
+                "map_day2/1_video.html",
+                "map_day3/1_video.html",
+                "map_day4/1_video.html",
+                "map_day5/1_video.html",
+                "map_day6/1_video.html",
+                "map_day7/1_video.html",
+                "map_day8/1_video.html",
+                "map_day9/1_video.html",
+                "map_day10/1_video.html",
+            ]
+            const jumpNo = Math.floor(Math.random() * link.length)
+            const page = link[jumpNo]
+            // console.log(page)
+            window.location = page
+        }
+        </script>
+    </body>
+
+</html>
