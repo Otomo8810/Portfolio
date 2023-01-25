@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="utf-8">
+    <title>video1_q1</title>
+    <link rel="stylesheet" href="../css/test.css">
+  </head>
+
+  <body>
+    <h1>どっちに曲がった?</h1>
+    <p>※白のボタンをクリックすると曲がった先の景色が表示されます。</p>
+
+    <div class="box">
+      <img src="../map_images/map_day1_ver2/turn_Q0360.png" alt="曲がる直前の画像">
+
+      <img src="../map_images/map_day1_ver2/turn_R_g0420.png" alt="右に曲がった先の景色" id="dv1" class="r1 r2">
+      <input class="r_check" type="button" value="右に曲がった先の景色を表示" onclick="right();">
+      <a id="right_arrow" href="3_route.html" class="right">R</a>
+  
+      <img src="../map_images/map_day1_ver2/turn_L0420.png" alt="左に曲がった先の景色" id="dv2" class="l1 l2">
+      <input class="l_check" type="button" value="左に曲がった先の景色を表示" onclick="left();">
+      <a id="left_arrow" href="3_route.html" class="left">L</a>
+    </div>
+  </body>
+
+  <script>
+    function right(){
+    var obj = document.getElementById("dv1");
+      
+    //要素に設定されているclassの一覧を取得する
+    var list = obj.classList;
+    console.log(list);
+      
+    //要素にclass="cs3"が含まれているか判定する
+    var result = obj.classList.contains("r2");
+    console.log(result);
+      
+    //要素にclass="cs3"が含まれていれば削除、含まれなければ追加する
+    obj.classList.toggle("r2");
+    console.log(result.classList);
+    }
+
+    function left(){
+    var obj = document.getElementById("dv2");
+      
+    //要素に設定されているclassの一覧を取得する
+    var list = obj.classList;
+    console.log(list);
+      
+    //要素にclass="cs3"が含まれているか判定する
+    var result = obj.classList.contains("l2");
+    console.log(result);
+      
+    //要素にclass="cs3"が含まれていれば削除、含まれなければ追加する
+    obj.classList.toggle("l2");
+    console.log(result.classList);
+    }
+
+    document.getElementById("right_arrow").href = "3_route.html?ans=" + "R"
+    document.getElementById("left_arrow").href = "3_route.html?ans=" + "L"
+  </script>
+</html>

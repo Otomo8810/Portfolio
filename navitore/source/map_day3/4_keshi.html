@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="utf-8">
+        <title>video3_q3</title>
+        <link rel="stylesheet" href="../css/4thQ.css">
+    </head>
+
+    <body>
+        <h1>問題の景色が見える矢印の向きはA~Cのどれ?</h1>
+
+        <div class="line">
+            <div>
+                <a><img src="../map_images/g3/g3_keshi3_0840.png" alt="問題の画像"></a>
+                <p>問題</p>
+            </div>
+            <div>
+                <a id="A" href="5_yaji.html" class="answer"><img src="../map_images/g3/g3_yaji3.png" alt="Aの画像"></a>
+                <p>A</p>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="line">
+            <div>
+                <a id="B" href="5_yaji.html" class="answer"><img src="../map_images/g3/g3_yaji1.png" alt="Bの画像"></a>
+                <p>B</p>
+            </div>
+            <div>
+                <a id="C" href="5_yaji.html" class="answer"><img src="../map_images/g3/g3_yaji2.png" alt="Cの画像"></a>
+                <p>C</p>
+            </div>
+        </div>
+
+        <script>
+            const url = location.search;
+            const ans = url.split("=")[1]
+            document.getElementById("A").href = "5_yaji.html?ans=" + ans + "A"
+            document.getElementById("B").href = "5_yaji.html?ans=" + ans + "B"
+            document.getElementById("C").href = "5_yaji.html?ans=" + ans + "C"
+        </script>
+    </body>
+    
+</html>
